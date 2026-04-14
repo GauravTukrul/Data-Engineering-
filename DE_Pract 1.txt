@@ -1,0 +1,71 @@
+Step 1: Install & Start CouchDB
+
+Download and install Apache CouchDB
+Open it → make sure the server is running
+Default credentials:
+Username: admin
+Password: admin
+
+
+Step 2: Open Command Prompt (Run as Administrator)
+
+
+Step 3: Check CouchDB Server
+
+curl http://127.0.0.1:5984/
+
+
+Step 4: View All Databases
+
+curl http://127.0.0.1:5984/_all_dbs -u admin:admin
+
+
+Step 5: Create Database
+
+curl -X PUT http://127.0.0.1:5984/students -u admin:admin
+
+
+Step 6: Insert Document
+curl -X POST http://127.0.0.1:5984/students -u admin:admin -H "Content-Type: application/json" -d "{\"name\":\"Rahul\",\"roll\":101,\"course\":\"BCA\"}"
+
+
+Step 7: Insert Another Document
+curl -X POST http://127.0.0.1:5984/students -u admin:admin -H "Content-Type: application/json" -d "{\"name\":\"Priya\",\"roll\":102,\"course\":\"BCA\"}"
+
+
+
+
+Step 8: Bulk Insert
+
+curl -X POST http://127.0.0.1:5984/students/_bulk_docs -u admin:admin -H "Content-Type: application/json" -d "{\"docs\":[{\"name\":\"Amit\",\"roll\":103,\"course\":\"BCA\"},{\"name\":\"Neha\",\"roll\":104,\"course\":\"BCA\"},{\"name\":\"Riya\",\"roll\":105,\"course\":\"BCA\"}]}"
+
+
+
+Step 9: View All Documents
+curl http://127.0.0.1:5984/students/_all_docs?include_docs=true -u admin:admin
+
+
+
+
+Step 10: Read Specific Document
+curl http://127.0.0.1:5984/students/document_id -u admin:admin
+
+
+
+
+Step 11: Update Document
+curl -X PUT http://127.0.0.1:5984/students/document_id -u admin:admin -H "Content-Type: application/json" -d "{\"_rev\":\"revision_number\",\"name\":\"Rahul\",\"roll\":101,\"course\":\"BCA\",\"marks\":85}"
+
+
+
+
+Step 12: Delete Document
+
+curl -X DELETE http://127.0.0.1:5984/students/document_id?rev=revision_number -u admin:admin
+
+
+Step 13: Delete Database
+curl -X DELETE http://127.0.0.1:5984/students -u admin:admin
+
+
+	
