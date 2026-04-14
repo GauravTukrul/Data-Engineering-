@@ -1,0 +1,11 @@
+car,year,Present_Price,Kms_Driven,Fuel_Type,Transmission,Owner,price
+Swift,2018,5.6,27000,Petrol,Manual,0,4.5
+City,2017,9.8,32000,Petrol,Manual,0,7.5
+Creta,2019,13.5,18000,Diesel,Manual,0,11.2
+Baleno,2020,7.1,15000,Petrol,Manual,0,6.4
+Innova,2016,18,60000,Diesel,Manual,1,14.5
+i20,2019,7.8,22000,Petrol,Manual,0,6.5
+Fortuner,2018,32,45000,Diesel,Automatic,0,28
+Verna,2017,10.2,35000,Petrol,Manual,0,8.2
+Ciaz,2018,8.7,28000,Petrol,Manual,0,7
+Alto,2020,3.5,12000,Petrol,Manual,0,3
